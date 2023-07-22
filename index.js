@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
+const PORT  = process.env.PORT ||4000
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
@@ -152,5 +153,5 @@ app.delete('/post/:id', async (req, res) => {
 );
 
 
-app.listen(4000);
+app.listen(PORT);
 //
