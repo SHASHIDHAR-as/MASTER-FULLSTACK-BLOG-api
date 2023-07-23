@@ -1,8 +1,5 @@
 # MASTER-FULLSTACK-BLOG-api
 This website is a blog where we can create blogs related to Full stack development backend
-# MERN-iNoteBook
-https://shashidhar-inotebook.netlify.app
-This is MERN application of iNoteBOOk
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
