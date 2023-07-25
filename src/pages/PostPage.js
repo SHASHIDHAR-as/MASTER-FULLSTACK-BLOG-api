@@ -10,8 +10,8 @@ export default function PostPage() {
   const {id} = useParams();
   const navigate = useNavigate(); // Use the useNavigate hook to perform programmatic navigation.
   useEffect(() => {
-    // fetch(`http://localhost:4000/post/${id}`)
-    fetch(`https://master-mern-blog.onrender.com/post/${id}`)
+    fetch(`http://localhost:4000/post/${id}`)
+    // fetch(`https://master-mern-blog.onrender.com/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
@@ -20,8 +20,8 @@ export default function PostPage() {
   }, []);
 
   const handleDelete = () => {
-    // fetch(`http://localhost:4000/post/${id}`, {
-    fetch(`https://master-mern-blog.onrender.com/post/${id}`, {
+    fetch(`http://localhost:4000/post/${id}`, {
+    // fetch(`https://master-mern-blog.onrender.com/post/${id}`, {
       method: 'DELETE',
     })
     .then(response => {
@@ -64,8 +64,8 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        {/* <img src={`http://localhost:4000/${postInfo.cover}`} alt=""/> */}
-        <img src={`https://master-mern-blog.onrender.com/${postInfo.cover}`} alt=""/>
+        <img src={`http://localhost:4000/${postInfo.cover}`} alt=""/>
+        {/* <img src={`https://master-mern-blog.onrender.com/${postInfo.cover}`} alt=""/> */}
       </div>
       <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
     </div>
